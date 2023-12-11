@@ -28,9 +28,9 @@ class CalculatorVM {
 //            print("The bill: \(bill)")
 //        }.store(in: &cancellables)
         
-//        input.tipPubisher.sink { tip in
-//            print("The tip: \(tip)")
-//        }.store(in: &cancellables)
+        input.tipPubisher.sink { tip in
+            print("The tip: \(tip)")
+        }.store(in: &cancellables)
         
         let result = Result(
             amountPerPerson: 500,
