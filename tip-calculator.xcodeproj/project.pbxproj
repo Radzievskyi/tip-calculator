@@ -33,6 +33,8 @@
 		E536DEBD2B26827D002EA75A /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536DEBC2B26827D002EA75A /* AmountView.swift */; };
 		E536DEC02B2704CD002EA75A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536DEBF2B2704CD002EA75A /* Tip.swift */; };
 		E536DEC22B270597002EA75A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536DEC12B270597002EA75A /* HeaderView.swift */; };
+		E59F23722B277691001BD789 /* CalculatorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F23712B277691001BD789 /* CalculatorVM.swift */; };
+		E59F23742B277945001BD789 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F23732B277945001BD789 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		E536DEBC2B26827D002EA75A /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		E536DEBF2B2704CD002EA75A /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		E536DEC12B270597002EA75A /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		E59F23712B277691001BD789 /* CalculatorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVM.swift; sourceTree = "<group>"; };
+		E59F23732B277945001BD789 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +138,8 @@
 		E536DE652B24EE7E002EA75A /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
-				E536DEBE2B2704C2002EA75A /* Model */,
+				E59F23702B277679001BD789 /* view model */,
+				E536DEBE2B2704C2002EA75A /* model */,
 				E536DEB72B2671C9002EA75A /* factory */,
 				E536DEB42B250E1A002EA75A /* extensions */,
 				E536DEAF2B250D99002EA75A /* config */,
@@ -213,12 +218,21 @@
 			path = factory;
 			sourceTree = "<group>";
 		};
-		E536DEBE2B2704C2002EA75A /* Model */ = {
+		E536DEBE2B2704C2002EA75A /* model */ = {
 			isa = PBXGroup;
 			children = (
 				E536DEBF2B2704CD002EA75A /* Tip.swift */,
+				E59F23732B277945001BD789 /* Result.swift */,
 			);
-			path = Model;
+			path = model;
+			sourceTree = "<group>";
+		};
+		E59F23702B277679001BD789 /* view model */ = {
+			isa = PBXGroup;
+			children = (
+				E59F23712B277691001BD789 /* CalculatorVM.swift */,
+			);
+			path = "view model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +381,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59F23742B277945001BD789 /* Result.swift in Sources */,
+				E59F23722B277691001BD789 /* CalculatorVM.swift in Sources */,
 				E536DEBD2B26827D002EA75A /* AmountView.swift in Sources */,
 				E536DE6B2B24EE7E002EA75A /* CalculatorViewController.swift in Sources */,
 				E536DEBB2B267A5E002EA75A /* UIView+Extension.swift in Sources */,
@@ -556,7 +572,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DLN6AP6LS2;
+				DEVELOPMENT_TEAM = MNHCC9X773;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "tip-calculator/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -583,7 +599,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DLN6AP6LS2;
+				DEVELOPMENT_TEAM = MNHCC9X773;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "tip-calculator/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

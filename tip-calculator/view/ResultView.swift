@@ -11,7 +11,7 @@ class ResultView: UIView {
     
     private let headerLabel: UILabel = {
         LabelFactory.build(
-            text: "Total p/persopm",
+            text: "Total per person",
             font: ThemeFont.demibold(ofsize: 18))
     }()
     
@@ -20,7 +20,10 @@ class ResultView: UIView {
         label.textAlignment = .center
         let text = NSMutableAttributedString(
             string: "$0",
-            attributes: [.font : ThemeFont.bold(ofsize: 48)])
+            attributes: [
+                .font: ThemeFont.bold(ofsize: 48),
+                .foregroundColor: ThemeColor.text
+            ])
         text.addAttributes([
             .font: ThemeFont.bold(ofsize: 24)
         ], range: NSMakeRange(0, 1))
