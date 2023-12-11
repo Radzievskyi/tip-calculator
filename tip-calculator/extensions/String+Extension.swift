@@ -9,6 +9,6 @@ import Foundation
 
 extension String {
     var doubleValue: Double? {
-        Double(self)
+        Double(self.replacingOccurrences(of: ",", with: "."))
     }
 }
