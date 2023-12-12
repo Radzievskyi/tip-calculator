@@ -18,9 +18,9 @@ class TipInputView: UIView {
     }()
     
     private lazy var tenPercentTipButton: UIButton = {
-        let button = buildTipButton(tip: .tenPecent)
+        let button = buildTipButton(tip: .tenPercent)
         button.tapPublisher.flatMap({
-            Just(Tip.tenPecent)
+            Just(Tip.tenPercent)
         }).assign(to: \.value, on: tipSubject)
             .store(in: &cancellables)
         button.accessibilityIdentifier = ScreenIdentifier.TipInputView.tenPercentButton.rawValue
@@ -131,6 +131,7 @@ class TipInputView: UIView {
                 textField.placeholder = "Make it generous!"
                 textField.keyboardType = .numberPad
                 textField.autocorrectionType = .no
+                textField.accessibilityIdentifier = ScreenIdentifier.TipInputView.customTipAlertTextField.rawValue
             }
             let cancelAction = UIAlertAction(
                 title: "Cancel",
@@ -155,7 +156,7 @@ class TipInputView: UIView {
             switch tip {
             case .none:
                 break
-            case .tenPecent:
+            case .tenPercent:
                 tenPercentTipButton.backgroundColor = ThemeColor.secondary
             case .fifteenPercent:
                 fiftenPercentTipButton.backgroundColor = ThemeColor.secondary

@@ -75,7 +75,7 @@ class CalculatorVM {
         switch tip {
         case .none:
             return 0
-        case .tenPecent:
+        case .tenPercent:
             return bill * 0.1
         case .fifteenPercent:
             return bill * 0.15

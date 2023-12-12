@@ -74,7 +74,7 @@ final class tip_calculatorTests: XCTestCase {
     func testResultWith10PercentTipFor2Person() {
         // given
         let bill: Double = 100.0
-        let tip: Tip = .tenPecent
+        let tip: Tip = .tenPercent
         let split: Int = 2
         let input = buildInput(bill: bill, tip: tip, split: split)
         
@@ -109,7 +109,7 @@ final class tip_calculatorTests: XCTestCase {
     
     func testSoundPlayedAndCalculatorResetOnLogoViewTap() {
         //given
-        let input = buildInput(bill: 100, tip: .tenPecent, split: 2)
+        let input = buildInput(bill: 100, tip: .tenPercent, split: 2)
         let output = sut.transform(input: input)
         let expectation1 = XCTestExpectation(description: "Reset calculator called")
         let expectation2 = audioPlayerService.expectation
