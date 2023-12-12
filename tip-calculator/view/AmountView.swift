@@ -56,6 +56,18 @@ class AmountView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configure(text: String) {
+        let text = NSMutableAttributedString(
+            string: text,
+            attributes: [
+                .font: ThemeFont.bold(ofsize: 24)
+            ])
+        text.addAttributes([
+            .font: ThemeFont.bold(ofsize: 16)
+        ], range: NSMakeRange(0, 1))
+        amountLabel.attributedText = text
+    }
+    
     private func layout() {
         addSubview(stackView)
         stackView.snp.makeConstraints { make in
