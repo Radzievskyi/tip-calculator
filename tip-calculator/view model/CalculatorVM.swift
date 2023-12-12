@@ -12,7 +12,7 @@ class CalculatorVM {
     
     struct Input {
         let billPublisher: AnyPublisher<Double, Never>
-        let tipPubisher: AnyPublisher<Tip, Never>
+        let tipPublisher: AnyPublisher<Tip, Never>
         let splitPublisher: AnyPublisher<Int, Never>
     }
     
@@ -32,15 +32,42 @@ class CalculatorVM {
 //            print("The tip: \(tip)")
 //        }.store(in: &cancellables)
         
-        input.splitPublisher.sink { quantity in
-            print("Qauantity: \(quantity)")
-        }.store(in: &cancellables)
+//        input.splitPublisher.sink { quantity in
+//            print("Qauantity: \(quantity)")
+//        }.store(in: &cancellables)
         
-        let result = Result(
-            amountPerPerson: 500,
-            totalBill: 1000,
-            totalTip: 50.0)
-        return Output(updateViewPublisher: Just(result).eraseToAnyPublisher())
+        let updateViewPublisher = Publishers.CombineLatest3(
+            input.billPublisher,
+            input.tipPublisher,
+            input.splitPublisher
+        ).flatMap { [unowned self] (bill, tip, split) in
+            let totalTip = getTipAmount(bill: bill, tip: tip)
+            let totalBil = bill + totalTip
+            let amountPerPerson = totalBil / Double(split)
+            
+            let result = Result(
+                amountPerPerson: amountPerPerson,
+                totalBill: totalBil,
+                totalTip: totalTip)
+            return Just(result)
+        }.eraseToAnyPublisher()
+        
+        return Output(updateViewPublisher: updateViewPublisher)
+    }
+    
+    private func getTipAmount(bill: Double, tip: Tip) -> Double {
+        switch tip {
+        case .none:
+            return 0
+        case .tenPecent:
+            return bill * 0.1
+        case .fifteenPercent:
+            return bill * 0.15
+        case .twentyPercent:
+            return bill * 0.2
+        case .custom(let value):
+            return Double(value)
+        }
     }
     
 }
