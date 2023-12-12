@@ -35,6 +35,8 @@
 		E536DEC22B270597002EA75A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536DEC12B270597002EA75A /* HeaderView.swift */; };
 		E5494AFB2B27D4F600E766BF /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5494AFA2B27D4F600E766BF /* Int+Extension.swift */; };
 		E5494AFD2B27E9DA00E766BF /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5494AFC2B27E9DA00E766BF /* Double+Extension.swift */; };
+		E5494B002B27FED900E766BF /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E5494AFF2B27FED900E766BF /* click.m4a */; };
+		E5494B032B27FF4700E766BF /* AudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5494B022B27FF4700E766BF /* AudioPlayerService.swift */; };
 		E59F23722B277691001BD789 /* CalculatorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F23712B277691001BD789 /* CalculatorVM.swift */; };
 		E59F23742B277945001BD789 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F23732B277945001BD789 /* Result.swift */; };
 		E59F23762B277F05001BD789 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F23752B277F05001BD789 /* String+Extension.swift */; };
@@ -86,6 +88,8 @@
 		E536DEC12B270597002EA75A /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E5494AFA2B27D4F600E766BF /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		E5494AFC2B27E9DA00E766BF /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		E5494AFF2B27FED900E766BF /* click.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.m4a; sourceTree = "<group>"; };
+		E5494B022B27FF4700E766BF /* AudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerService.swift; sourceTree = "<group>"; };
 		E59F23712B277691001BD789 /* CalculatorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVM.swift; sourceTree = "<group>"; };
 		E59F23732B277945001BD789 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E59F23752B277F05001BD789 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 		E536DE652B24EE7E002EA75A /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				E5494B012B27FF0E00E766BF /* service */,
+				E5494AFE2B27FECC00E766BF /* resource */,
 				E59F23702B277679001BD789 /* view model */,
 				E536DEBE2B2704C2002EA75A /* model */,
 				E536DEB72B2671C9002EA75A /* factory */,
@@ -237,6 +243,22 @@
 				E59F23732B277945001BD789 /* Result.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		E5494AFE2B27FECC00E766BF /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				E5494AFF2B27FED900E766BF /* click.m4a */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		E5494B012B27FF0E00E766BF /* service */ = {
+			isa = PBXGroup;
+			children = (
+				E5494B022B27FF4700E766BF /* AudioPlayerService.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 		E59F23702B277679001BD789 /* view model */ = {
@@ -367,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5494B002B27FED900E766BF /* click.m4a in Resources */,
 				E536DE732B24EE80002EA75A /* LaunchScreen.storyboard in Resources */,
 				E536DE702B24EE80002EA75A /* Assets.xcassets in Resources */,
 			);
@@ -405,6 +428,7 @@
 				E536DEB12B250DB8002EA75A /* ThemeColor.swift in Sources */,
 				E536DEB62B250E3A002EA75A /* UIColor+Extension.swift in Sources */,
 				E536DEAA2B24FA52002EA75A /* BillInputView.swift in Sources */,
+				E5494B032B27FF4700E766BF /* AudioPlayerService.swift in Sources */,
 				E536DEA82B24FA2C002EA75A /* ResultView.swift in Sources */,
 				E536DE672B24EE7E002EA75A /* AppDelegate.swift in Sources */,
 				E536DEB32B250DC8002EA75A /* ThemeFont.swift in Sources */,
