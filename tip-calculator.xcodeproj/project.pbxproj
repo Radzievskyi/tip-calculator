@@ -34,6 +34,7 @@
 		E536DEC02B2704CD002EA75A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536DEBF2B2704CD002EA75A /* Tip.swift */; };
 		E536DEC22B270597002EA75A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536DEC12B270597002EA75A /* HeaderView.swift */; };
 		E5494AFB2B27D4F600E766BF /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5494AFA2B27D4F600E766BF /* Int+Extension.swift */; };
+		E5494AFD2B27E9DA00E766BF /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5494AFC2B27E9DA00E766BF /* Double+Extension.swift */; };
 		E59F23722B277691001BD789 /* CalculatorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F23712B277691001BD789 /* CalculatorVM.swift */; };
 		E59F23742B277945001BD789 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F23732B277945001BD789 /* Result.swift */; };
 		E59F23762B277F05001BD789 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F23752B277F05001BD789 /* String+Extension.swift */; };
@@ -84,6 +85,7 @@
 		E536DEBF2B2704CD002EA75A /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		E536DEC12B270597002EA75A /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E5494AFA2B27D4F600E766BF /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		E5494AFC2B27E9DA00E766BF /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		E59F23712B277691001BD789 /* CalculatorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVM.swift; sourceTree = "<group>"; };
 		E59F23732B277945001BD789 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E59F23752B277F05001BD789 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				E59F23752B277F05001BD789 /* String+Extension.swift */,
 				E59F23772B278EB1001BD789 /* UIResponder+Extension.swift */,
 				E5494AFA2B27D4F600E766BF /* Int+Extension.swift */,
+				E5494AFC2B27E9DA00E766BF /* Double+Extension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				E536DE672B24EE7E002EA75A /* AppDelegate.swift in Sources */,
 				E536DEB32B250DC8002EA75A /* ThemeFont.swift in Sources */,
 				E536DE692B24EE7E002EA75A /* SceneDelegate.swift in Sources */,
+				E5494AFD2B27E9DA00E766BF /* Double+Extension.swift in Sources */,
 				E536DEB92B2671DB002EA75A /* LabelFactory.swift in Sources */,
 				E536DEC02B2704CD002EA75A /* Tip.swift in Sources */,
 				E536DEAE2B24FA81002EA75A /* SplitInputView.swift in Sources */,

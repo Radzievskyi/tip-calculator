@@ -25,7 +25,7 @@ class AmountView: UIView {
         label.textAlignment = textAlignment
         label.textColor = ThemeColor.primary
         let text = NSMutableAttributedString(
-            string: "$0",
+            string: 0.currencyFormatted,
             attributes: [
                 .font: ThemeFont.bold(ofsize: 24)
             ])
@@ -56,9 +56,9 @@ class AmountView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(text: String) {
+    func configure(amount: Double) {
         let text = NSMutableAttributedString(
-            string: text,
+            string: amount.currencyFormatted,
             attributes: [
                 .font: ThemeFont.bold(ofsize: 24)
             ])
